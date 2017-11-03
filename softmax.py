@@ -1,13 +1,16 @@
 '''
+  1.9 Training Logistic Classifier
   Define the function softmax to compute the softmax probability values
+  softmax(x) function should return a NumPy array of the same shape as x.
+
 '''
 
 import numpy as np
-scores = [3.0. 1.0, 0.2]
+scores = [3.0, 1.0, 0.2]
 def softmax(x):
-  pass
+  return np.exp(x) / np.sum(np.exp(x), axis = 0)
 
-print sofmax(scores)
+print softmax(scores)
 
 import matplotlib.pyplot as plt
 x = np.arange(-2.0, 6.0, 0.1)
